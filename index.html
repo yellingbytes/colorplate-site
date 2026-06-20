@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ColorPlate - Archive the colors you eat</title>
+    <meta
+      name="description"
+      content="ColorPlate turns meal photos into living color ribbons - a visual archive of your food spectrum."
+    >
+    <meta name="theme-color" content="#0d0b0a">
+    <meta property="og:title" content="ColorPlate - Archive the colors you eat">
+    <meta
+      property="og:description"
+      content="A visual food archive, not a calorie tracker."
+    >
+    <meta property="og:type" content="website">
+    <link rel="preload" href="assets/screenshots/archive.jpg" as="image">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header" aria-label="Primary">
+        <a class="wordmark" href="#top" aria-label="ColorPlate home">
+          <span class="wordmark-mark" aria-hidden="true"></span>
+          ColorPlate
+        </a>
+        <nav class="site-nav" aria-label="Sections">
+          <a href="#spectrum">Spectrum</a>
+          <a href="#eat">Eat</a>
+          <a href="#share">Share</a>
+        </nav>
+        <a class="header-cta" href="https://testflight.apple.com/join/rWr4e8p2" target="_blank" rel="noopener">Join TestFlight</a>
+      </header>
+
+      <main id="main">
+        <section id="top" class="hero section-grid" aria-labelledby="hero-title">
+          <div class="hero-atmosphere" aria-hidden="true">
+            <span class="pigment-blob pigment-blob-red"></span>
+            <span class="pigment-blob pigment-blob-gold"></span>
+            <span class="pigment-blob pigment-blob-violet"></span>
+            <span class="ambient-ribbon ambient-ribbon-one"></span>
+            <span class="ambient-ribbon ambient-ribbon-two"></span>
+            <span class="ambient-ribbon ambient-ribbon-three"></span>
+          </div>
+
+          <div class="hero-story-ribbon" aria-hidden="true">
+            <span class="story-dot"></span>
+            <span class="story-line"></span>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow hero-kicker">A visual food archive</p>
+            <h1 id="hero-title">Archive the colors you eat.</h1>
+            <p class="hero-subhead">
+              ColorPlate turns meal photos into living color ribbons - a visual archive of your food spectrum.
+            </p>
+            <div class="cta-row">
+              <a class="button button-primary" href="https://testflight.apple.com/join/rWr4e8p2" target="_blank" rel="noopener">Join TestFlight</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="ColorPlate app archive preview">
+            <div class="spectral-ribbon hero-stream" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="plate-sequence" aria-hidden="true">
+              <div class="blank-plate"></div>
+              <div class="plate-pigment"></div>
+            </div>
+            <figure class="phone phone-hero parallax-card" data-tilt-card>
+              <span class="phone-speaker" aria-hidden="true"></span>
+              <span class="phone-screen-glow" aria-hidden="true"></span>
+              <span class="phone-reflection" aria-hidden="true"></span>
+              <div class="phone-screen">
+                <img
+                  src="assets/screenshots/archive.jpg"
+                  alt="ColorPlate home archive showing daily meal ribbons"
+                  width="416"
+                  height="900"
+                >
+              </div>
+            </figure>
+          </div>
+          <a class="scroll-cue" href="#spectrum" aria-label="Scroll to discover">
+            <span>Scroll to discover</span>
+            <i aria-hidden="true"></i>
+          </a>
+        </section>
+
+        <section class="concept content-section" aria-labelledby="concept-title">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Concept</p>
+            <h2 id="concept-title">Every meal leaves a trace.</h2>
+            <p>
+              Most food trackers count calories. ColorPlate remembers color.
+            </p>
+          </div>
+
+          <div class="analysis-showcase reveal" aria-label="ColorPlate meal analysis with ingredient color extraction">
+            <figure class="phone phone-analysis parallax-card">
+              <span class="phone-speaker" aria-hidden="true"></span>
+              <img
+                src="assets/screenshots/spectrum.jpg"
+                alt="ColorPlate analysis screen showing a meal color field, ribbon, and ingredient breakdown"
+                width="416"
+                height="900"
+              >
+            </figure>
+            <article class="ingredient-analysis-card">
+              <span class="step-label">Analysis</span>
+              <h3>Color becomes memory.</h3>
+              <p>
+                A plate resolves into edible colors, ingredient notes, and a ribbon that joins the archive.
+              </p>
+              <div class="analysis-ribbon" aria-hidden="true">
+                <span style="--w:30%;--c:#cf4f3f"></span>
+                <span style="--w:24%;--c:#c98b3d"></span>
+                <span style="--w:18%;--c:#e5d85a"></span>
+                <span style="--w:13%;--c:#79a85d"></span>
+                <span style="--w:9%;--c:#4d5b92"></span>
+                <span style="--w:6%;--c:#2a2338"></span>
+              </div>
+              <ul class="ingredient-list" aria-label="Example extracted ingredients">
+                <li><span style="--c:#cf4f3f"></span><strong>Tomato</strong><em>30%</em></li>
+                <li><span style="--c:#c98b3d"></span><strong>Turmeric</strong><em>24%</em></li>
+                <li><span style="--c:#e5d85a"></span><strong>Lemon</strong><em>18%</em></li>
+                <li><span style="--c:#79a85d"></span><strong>Avocado</strong><em>13%</em></li>
+                <li><span style="--c:#4d5b92"></span><strong>Blueberry</strong><em>9%</em></li>
+                <li><span style="--c:#2a2338"></span><strong>Black rice</strong><em>6%</em></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="spectrum" class="feature-section spectrum-section section-grid" aria-labelledby="spectrum-title">
+          <div class="feature-copy reveal">
+            <p class="eyebrow">Spectrum</p>
+            <h2 id="spectrum-title">See the colors you actually eat.</h2>
+            <p>
+              Rainbow Score, streak, discovered colors, and chromatype turn the archive into a quiet portrait of your edible colors.
+            </p>
+            <dl class="quiet-stats">
+              <div>
+                <dt>Rainbow Score</dt>
+                <dd>84</dd>
+              </div>
+              <div>
+                <dt>Colors discovered</dt>
+                <dd>29 / 80</dd>
+              </div>
+              <div>
+                <dt>Chromatype</dt>
+                <dd>Solar Forager</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="spectrum-visual reveal">
+            <figure class="phone phone-feature parallax-card">
+              <span class="phone-speaker" aria-hidden="true"></span>
+              <img
+                src="assets/screenshots/atlas.jpg"
+                alt="ColorPlate spectrum atlas with discovered colors and chromatype"
+                width="416"
+                height="900"
+              >
+            </figure>
+            <div class="spectrum-panel" aria-hidden="true">
+              <div class="score-ring">
+                <span>84</span>
+              </div>
+              <div class="atlas-grid">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="eat" class="feature-section eat-section section-grid" aria-labelledby="eat-title">
+          <div class="feature-copy reveal">
+            <p class="eyebrow">Eat</p>
+            <h2 id="eat-title">Discover what&apos;s missing.</h2>
+            <p>
+              ColorPlate helps you explore the colors you rarely eat - through ingredients and dishes, not diets.
+            </p>
+            <div class="ingredient-stack" aria-label="Suggested missing colors">
+              <span style="--c:#4c5a91">Blueberry</span>
+              <span style="--c:#775170">Fig</span>
+              <span style="--c:#8ccb77">Lime</span>
+              <span style="--c:#e5d7bc">Oat</span>
+            </div>
+          </div>
+          <div class="eat-visual reveal">
+            <figure class="phone phone-feature parallax-card">
+              <span class="phone-speaker" aria-hidden="true"></span>
+              <img
+                src="assets/screenshots/eat.jpg"
+                alt="ColorPlate Eat view with missing colors and dish inspiration"
+                width="416"
+                height="900"
+              >
+            </figure>
+            <div class="dish-card" aria-hidden="true">
+              <span class="step-label">Dish study</span>
+              <h3>Black sesame citrus salad</h3>
+              <div class="analysis-ribbon">
+                <span style="--w:26%;--c:#262237"></span>
+                <span style="--w:20%;--c:#f28b52"></span>
+                <span style="--w:22%;--c:#ebd85a"></span>
+                <span style="--w:18%;--c:#68a85b"></span>
+                <span style="--w:14%;--c:#e5d7bc"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="share" class="share-section content-section" aria-labelledby="share-title">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Share</p>
+            <h2 id="share-title">Turn your month into artwork.</h2>
+            <p>
+              Export archive posters, spectrum portraits, and year galleries that feel closer to exhibition notes than screenshots.
+            </p>
+          </div>
+
+          <div class="poster-grid reveal" aria-label="ColorPlate share poster previews">
+            <article class="poster-card poster-archive">
+              <p>Archive Poster</p>
+              <div class="poster-ribbons" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <footer>June / 51 plates</footer>
+            </article>
+            <article class="poster-card poster-spectrum">
+              <p>Spectrum Portrait</p>
+              <img
+                src="assets/screenshots/share-poster.jpg"
+                alt="ColorPlate share poster generated by the app"
+                width="416"
+                height="900"
+              >
+            </article>
+            <article class="poster-card poster-year">
+              <p>Year Gallery</p>
+              <img
+                src="assets/artwork/year-in-color-portrait.jpg"
+                alt="ColorPlate year gallery artwork"
+                width="900"
+                height="900"
+              >
+            </article>
+          </div>
+        </section>
+
+        <section class="privacy-section content-section" aria-labelledby="privacy-title">
+          <div class="privacy-panel reveal">
+            <p class="eyebrow">Privacy</p>
+            <h2 id="privacy-title">Private by design.</h2>
+            <p>
+              No account required. Your archive stays yours. Photos are used to create your ColorPlate analysis.
+            </p>
+            <div class="legal-links">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Use</a>
+              <a href="support.html">Support</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="app-store-section content-section" aria-labelledby="app-store-title">
+          <div class="app-store-panel reveal">
+            <p class="eyebrow">App Store information</p>
+            <h2 id="app-store-title">Clear, review-ready basics.</h2>
+            <div class="compliance-grid">
+              <article>
+                <span>01</span>
+                <h3>Data and privacy</h3>
+                <p>No account is required. Meal photos are used to create the analysis and archive. Location is optional and used only for nearby food discovery.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>AI processing</h3>
+                <p>Some analysis may use secure third-party AI providers. Users are told when a selected photo is processed for color and ingredient analysis.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Regulatory status</h3>
+                <p>ColorPlate is a visual food archive. It is not a medical device and does not provide diagnosis, treatment, dietary, or clinical advice.</p>
+              </article>
+              <article>
+                <span>04</span>
+                <h3>Support</h3>
+                <p>Support, privacy requests, and legal contact are available from this site and inside the app settings.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="final-cta" class="final-cta content-section" aria-labelledby="final-title">
+          <div class="final-panel reveal">
+            <p class="eyebrow">Begin</p>
+            <h2 id="final-title">Begin your color archive.</h2>
+            <a class="button button-primary" href="https://testflight.apple.com/join/rWr4e8p2" target="_blank" rel="noopener">
+              Join TestFlight
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>ColorPlate</strong>
+          <span>Archive the colors you eat.</span>
+        </div>
+        <nav aria-label="Legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <p>&copy; 2026 Yelling Bytes</p>
+      </footer>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
