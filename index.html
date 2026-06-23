@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ColorPlate - Archive the colors you eat</title>
+    <title>食色录 - 把餐食变成色彩档案</title>
     <meta
       name="description"
-      content="ColorPlate turns meal photos into living color ribbons - a visual archive of your food spectrum."
+      content="食色录将日常餐食转化为会生长的色彩档案。拍下一份餐盘，生成色彩丝带，持续构建你的饮食色谱。"
     >
     <meta name="theme-color" content="#0d0b0a">
-    <meta property="og:title" content="ColorPlate - Archive the colors you eat">
+    <meta property="og:title" content="食色录 - 把餐食变成色彩档案">
     <meta
       property="og:description"
-      content="A visual food archive, not a calorie tracker."
+      content="一座关于可食用色彩记忆的电影感档案。"
     >
     <meta property="og:type" content="website">
     <link rel="preload" href="assets/screenshots/archive.jpg" as="image">
@@ -20,19 +20,24 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
     <div class="site-shell">
       <header class="site-header" aria-label="Primary">
-        <a class="wordmark" href="#top" aria-label="ColorPlate home">
+        <a class="wordmark" href="#top" aria-label="食色录首页" data-i18n-attr="aria-label:brandHome">
           <span class="wordmark-mark" aria-hidden="true"></span>
-          ColorPlate
+          <span data-i18n="brand">食色录</span>
         </a>
-        <nav class="site-nav" aria-label="Sections">
-          <a href="#spectrum">Spectrum</a>
-          <a href="#eat">Eat</a>
-          <a href="#share">Share</a>
+        <nav class="site-nav" aria-label="Sections" data-i18n-attr="aria-label:sections">
+          <a href="#spectrum" data-i18n="navSpectrum">色谱</a>
+          <a href="#eat" data-i18n="navEat">饮食</a>
+          <a href="#share" data-i18n="navShare">分享</a>
         </nav>
-        <a class="header-cta" href="https://testflight.apple.com/join/rWr4e8p2" target="_blank" rel="noopener">Join TestFlight</a>
+        <div class="header-actions">
+          <a class="header-cta" href="#final-cta" data-i18n="cta">加入 TestFlight</a>
+          <button class="language-toggle" type="button" aria-label="Switch language" aria-pressed="false" data-language-toggle>
+            <span data-lang-label>EN</span>
+          </button>
+        </div>
       </header>
 
       <main id="main">
@@ -52,17 +57,22 @@
           </div>
 
           <div class="hero-copy">
-            <p class="eyebrow hero-kicker">A visual food archive</p>
-            <h1 id="hero-title">Archive the colors you eat.</h1>
-            <p class="hero-subhead">
-              ColorPlate turns meal photos into living color ribbons - a visual archive of your food spectrum.
+            <p class="eyebrow hero-kicker" data-i18n="heroKicker">可食用色彩记忆档案</p>
+            <h1
+              id="hero-title"
+              data-i18n="heroTitle"
+              data-lines-zh="把餐食变成|色彩档案。"
+              data-lines-en="Archive the|colors you eat."
+            >把餐食变成色彩档案。</h1>
+            <p class="hero-subhead" data-i18n="heroSubhead">
+              食色录将日常餐食转化为会生长的色彩档案。拍下一份餐盘，生成色彩丝带，持续构建你的饮食色谱。
             </p>
             <div class="cta-row">
-              <a class="button button-primary" href="https://testflight.apple.com/join/rWr4e8p2" target="_blank" rel="noopener">Join TestFlight</a>
+              <a class="button button-primary" href="#final-cta" data-i18n="cta">加入 TestFlight</a>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="ColorPlate app archive preview">
+          <div class="hero-visual" aria-label="食色录档案首页预览" data-i18n-attr="aria-label:heroVisual">
             <div class="spectral-ribbon hero-stream" aria-hidden="true">
               <span></span>
             </div>
@@ -77,43 +87,45 @@
               <div class="phone-screen">
                 <img
                   src="assets/screenshots/archive.jpg"
-                  alt="ColorPlate home archive showing daily meal ribbons"
+                  alt="食色录首页档案，展示每日餐食色彩丝带"
+                  data-i18n-attr="alt:archiveAlt"
                   width="416"
                   height="900"
                 >
               </div>
             </figure>
           </div>
-          <a class="scroll-cue" href="#spectrum" aria-label="Scroll to discover">
-            <span>Scroll to discover</span>
+          <a class="scroll-cue" href="#spectrum" aria-label="继续探索" data-i18n-attr="aria-label:scrollAria">
+            <span data-i18n="scroll">继续探索</span>
             <i aria-hidden="true"></i>
           </a>
         </section>
 
         <section class="concept content-section" aria-labelledby="concept-title">
           <div class="section-heading reveal">
-            <p class="eyebrow">Concept</p>
-            <h2 id="concept-title">Every meal leaves a trace.</h2>
-            <p>
-              Most food trackers count calories. ColorPlate remembers color.
+            <p class="eyebrow" data-i18n="conceptLabel">概念</p>
+            <h2 id="concept-title" data-i18n="conceptTitle">每一餐都会留下色彩痕迹。</h2>
+            <p data-i18n="conceptCopy">
+              大多数食物记录工具计算热量。食色录记住颜色。
             </p>
           </div>
 
-          <div class="analysis-showcase reveal" aria-label="ColorPlate meal analysis with ingredient color extraction">
+          <div class="analysis-showcase reveal" aria-label="食色录餐食分析与食材色彩提取" data-i18n-attr="aria-label:analysisAria">
             <figure class="phone phone-analysis parallax-card">
               <span class="phone-speaker" aria-hidden="true"></span>
               <img
                 src="assets/screenshots/spectrum.jpg"
-                alt="ColorPlate analysis screen showing a meal color field, ribbon, and ingredient breakdown"
+                alt="食色录餐食分析界面，展示色彩分布、色彩丝带和食材拆解"
+                data-i18n-attr="alt:analysisAlt"
                 width="416"
                 height="900"
               >
             </figure>
             <article class="ingredient-analysis-card">
-              <span class="step-label">Analysis</span>
-              <h3>Color becomes memory.</h3>
-              <p>
-                A plate resolves into edible colors, ingredient notes, and a ribbon that joins the archive.
+              <span class="step-label" data-i18n="analysisLabel">餐食分析</span>
+              <h3 data-i18n="analysisTitle">颜色变成记忆。</h3>
+              <p data-i18n="analysisCopy">
+                一份餐盘会被读成可食用色彩、食材信息，以及加入档案的色彩丝带。
               </p>
               <div class="analysis-ribbon" aria-hidden="true">
                 <span style="--w:30%;--c:#cf4f3f"></span>
@@ -123,13 +135,13 @@
                 <span style="--w:9%;--c:#4d5b92"></span>
                 <span style="--w:6%;--c:#2a2338"></span>
               </div>
-              <ul class="ingredient-list" aria-label="Example extracted ingredients">
-                <li><span style="--c:#cf4f3f"></span><strong>Tomato</strong><em>30%</em></li>
-                <li><span style="--c:#c98b3d"></span><strong>Turmeric</strong><em>24%</em></li>
-                <li><span style="--c:#e5d85a"></span><strong>Lemon</strong><em>18%</em></li>
-                <li><span style="--c:#79a85d"></span><strong>Avocado</strong><em>13%</em></li>
-                <li><span style="--c:#4d5b92"></span><strong>Blueberry</strong><em>9%</em></li>
-                <li><span style="--c:#2a2338"></span><strong>Black rice</strong><em>6%</em></li>
+              <ul class="ingredient-list" aria-label="示例食材" data-i18n-attr="aria-label:ingredientAria">
+                <li><span style="--c:#cf4f3f"></span><strong data-i18n="ingredientTomato">番茄</strong><em>30%</em></li>
+                <li><span style="--c:#c98b3d"></span><strong data-i18n="ingredientTurmeric">姜黄</strong><em>24%</em></li>
+                <li><span style="--c:#e5d85a"></span><strong data-i18n="ingredientLemon">柠檬</strong><em>18%</em></li>
+                <li><span style="--c:#79a85d"></span><strong data-i18n="ingredientAvocado">牛油果</strong><em>13%</em></li>
+                <li><span style="--c:#4d5b92"></span><strong data-i18n="ingredientBlueberry">蓝莓</strong><em>9%</em></li>
+                <li><span style="--c:#2a2338"></span><strong data-i18n="ingredientBlackRice">黑米</strong><em>6%</em></li>
               </ul>
             </article>
           </div>
@@ -137,23 +149,23 @@
 
         <section id="spectrum" class="feature-section spectrum-section section-grid" aria-labelledby="spectrum-title">
           <div class="feature-copy reveal">
-            <p class="eyebrow">Spectrum</p>
-            <h2 id="spectrum-title">See the colors you actually eat.</h2>
-            <p>
-              Rainbow Score, streak, discovered colors, and chromatype turn the archive into a quiet portrait of your edible colors.
+            <p class="eyebrow" data-i18n="spectrumLabel">色谱</p>
+            <h2 id="spectrum-title" data-i18n="spectrumTitle">看见你真正吃过的颜色。</h2>
+            <p data-i18n="spectrumCopy">
+              彩虹分数、连续记录、已解锁色彩和饮食色型，会把档案变成一幅安静的可食用色彩肖像。
             </p>
             <dl class="quiet-stats">
               <div>
-                <dt>Rainbow Score</dt>
+                <dt data-i18n="rainbowScore">彩虹分数</dt>
                 <dd>84</dd>
               </div>
               <div>
-                <dt>Colors discovered</dt>
+                <dt data-i18n="colorsDiscovered">已解锁色彩</dt>
                 <dd>29 / 80</dd>
               </div>
               <div>
-                <dt>Chromatype</dt>
-                <dd>Solar Forager</dd>
+                <dt data-i18n="chromatype">饮食色型</dt>
+                <dd data-i18n="solarForager">阳光采集者</dd>
               </div>
             </dl>
           </div>
@@ -162,7 +174,8 @@
               <span class="phone-speaker" aria-hidden="true"></span>
               <img
                 src="assets/screenshots/atlas.jpg"
-                alt="ColorPlate spectrum atlas with discovered colors and chromatype"
+                alt="食色录色谱图谱，展示已解锁色彩和饮食色型"
+                data-i18n-attr="alt:atlasAlt"
                 width="416"
                 height="900"
               >
@@ -183,16 +196,16 @@
 
         <section id="eat" class="feature-section eat-section section-grid" aria-labelledby="eat-title">
           <div class="feature-copy reveal">
-            <p class="eyebrow">Eat</p>
-            <h2 id="eat-title">Discover what&apos;s missing.</h2>
-            <p>
-              ColorPlate helps you explore the colors you rarely eat - through ingredients and dishes, not diets.
+            <p class="eyebrow" data-i18n="eatLabel">饮食</p>
+            <h2 id="eat-title" data-i18n="eatTitle">发现你缺少的颜色。</h2>
+            <p data-i18n="eatCopy">
+              食色录帮助你通过食材和菜品探索少吃的颜色，而不是围绕节食或体重做判断。
             </p>
-            <div class="ingredient-stack" aria-label="Suggested missing colors">
-              <span style="--c:#4c5a91">Blueberry</span>
-              <span style="--c:#775170">Fig</span>
-              <span style="--c:#8ccb77">Lime</span>
-              <span style="--c:#e5d7bc">Oat</span>
+            <div class="ingredient-stack" aria-label="建议补充的缺少色彩" data-i18n-attr="aria-label:missingAria">
+              <span style="--c:#4c5a91" data-i18n="missingBlueberry">蓝莓</span>
+              <span style="--c:#775170" data-i18n="missingFig">无花果</span>
+              <span style="--c:#8ccb77" data-i18n="missingLime">青柠</span>
+              <span style="--c:#e5d7bc" data-i18n="missingOat">燕麦</span>
             </div>
           </div>
           <div class="eat-visual reveal">
@@ -200,14 +213,15 @@
               <span class="phone-speaker" aria-hidden="true"></span>
               <img
                 src="assets/screenshots/eat.jpg"
-                alt="ColorPlate Eat view with missing colors and dish inspiration"
+                alt="食色录饮食页，展示缺少色彩和菜品灵感"
+                data-i18n-attr="alt:eatAlt"
                 width="416"
                 height="900"
               >
             </figure>
             <div class="dish-card" aria-hidden="true">
-              <span class="step-label">Dish study</span>
-              <h3>Black sesame citrus salad</h3>
+              <span class="step-label" data-i18n="dishLabel">菜品灵感</span>
+              <h3 data-i18n="dishTitle">黑芝麻柑橘沙拉</h3>
               <div class="analysis-ribbon">
                 <span style="--w:26%;--c:#262237"></span>
                 <span style="--w:20%;--c:#f28b52"></span>
@@ -221,36 +235,38 @@
 
         <section id="share" class="share-section content-section" aria-labelledby="share-title">
           <div class="section-heading reveal">
-            <p class="eyebrow">Share</p>
-            <h2 id="share-title">Turn your month into artwork.</h2>
-            <p>
-              Export archive posters, spectrum portraits, and year galleries that feel closer to exhibition notes than screenshots.
+            <p class="eyebrow" data-i18n="shareLabel">分享</p>
+            <h2 id="share-title" data-i18n="shareTitle">把一个月变成作品。</h2>
+            <p data-i18n="shareCopy">
+              导出档案海报、色谱肖像和年度画廊。它们更像展览记录，而不是普通截图。
             </p>
           </div>
 
-          <div class="poster-grid reveal" aria-label="ColorPlate share poster previews">
+          <div class="poster-grid reveal" aria-label="食色录分享海报预览" data-i18n-attr="aria-label:posterAria">
             <article class="poster-card poster-archive">
-              <p>Archive Poster</p>
+              <p data-i18n="archivePoster">档案海报</p>
               <div class="poster-ribbons" aria-hidden="true">
                 <span></span><span></span><span></span><span></span><span></span>
                 <span></span><span></span><span></span><span></span><span></span>
               </div>
-              <footer>June / 51 plates</footer>
+              <footer data-i18n="junePlates">6 月 / 51 份餐盘</footer>
             </article>
             <article class="poster-card poster-spectrum">
-              <p>Spectrum Portrait</p>
+              <p data-i18n="spectrumPortrait">色谱肖像</p>
               <img
                 src="assets/screenshots/share-poster.jpg"
-                alt="ColorPlate share poster generated by the app"
+                alt="食色录 App 生成的分享海报"
+                data-i18n-attr="alt:posterAlt"
                 width="416"
                 height="900"
               >
             </article>
             <article class="poster-card poster-year">
-              <p>Year Gallery</p>
+              <p data-i18n="yearGallery">年度画廊</p>
               <img
                 src="assets/artwork/year-in-color-portrait.jpg"
-                alt="ColorPlate year gallery artwork"
+                alt="食色录年度色彩画廊作品"
+                data-i18n-attr="alt:yearAlt"
                 width="900"
                 height="900"
               >
@@ -260,43 +276,43 @@
 
         <section class="privacy-section content-section" aria-labelledby="privacy-title">
           <div class="privacy-panel reveal">
-            <p class="eyebrow">Privacy</p>
-            <h2 id="privacy-title">Private by design.</h2>
-            <p>
-              No account required. Your archive stays yours. Photos are used to create your ColorPlate analysis.
+            <p class="eyebrow" data-i18n="privacyLabel">隐私</p>
+            <h2 id="privacy-title" data-i18n="privacyTitle">隐私优先。</h2>
+            <p data-i18n="privacyCopy">
+              无需账号。你的档案只属于你。餐食照片仅用于生成你的食色录分析。
             </p>
             <div class="legal-links">
-              <a href="privacy.html">Privacy Policy</a>
-              <a href="terms.html">Terms of Use</a>
-              <a href="support.html">Support</a>
+              <a href="privacy.html" data-i18n="privacyPolicy">隐私政策</a>
+              <a href="terms.html" data-i18n="terms">使用条款</a>
+              <a href="support.html" data-i18n="support">支持</a>
             </div>
           </div>
         </section>
 
         <section class="app-store-section content-section" aria-labelledby="app-store-title">
           <div class="app-store-panel reveal">
-            <p class="eyebrow">App Store information</p>
-            <h2 id="app-store-title">Clear, review-ready basics.</h2>
+            <p class="eyebrow" data-i18n="appStoreLabel">App Store 信息</p>
+            <h2 id="app-store-title" data-i18n="appStoreTitle">清晰、可审核的基础说明。</h2>
             <div class="compliance-grid">
               <article>
                 <span>01</span>
-                <h3>Data and privacy</h3>
-                <p>No account is required. Meal photos are used to create the analysis and archive. Location is optional and used only for nearby food discovery.</p>
+                <h3 data-i18n="dataPrivacyTitle">数据与隐私</h3>
+                <p data-i18n="dataPrivacyCopy">无需账号。餐食照片用于生成分析和档案。位置权限是可选的，只会在附近食物发现功能中使用。</p>
               </article>
               <article>
                 <span>02</span>
-                <h3>AI processing</h3>
-                <p>Some analysis may use secure third-party AI providers. Users are told when a selected photo is processed for color and ingredient analysis.</p>
+                <h3 data-i18n="aiTitle">AI 处理</h3>
+                <p data-i18n="aiCopy">部分分析可能使用安全的第三方 AI 提供方。用户选择照片进行食材和色彩分析时，会明确知道照片正在被处理。</p>
               </article>
               <article>
                 <span>03</span>
-                <h3>Regulatory status</h3>
-                <p>ColorPlate is a visual food archive. It is not a medical device and does not provide diagnosis, treatment, dietary, or clinical advice.</p>
+                <h3 data-i18n="regulatoryTitle">用途说明</h3>
+                <p data-i18n="regulatoryCopy">食色录是一款可视化食物档案工具，不是医疗设备，也不提供诊断、治疗、饮食处方或临床建议。</p>
               </article>
               <article>
                 <span>04</span>
-                <h3>Support</h3>
-                <p>Support, privacy requests, and legal contact are available from this site and inside the app settings.</p>
+                <h3 data-i18n="supportTitle">支持</h3>
+                <p data-i18n="supportCopy">你可以在网站和 App 设置中找到支持、隐私请求和法律联系入口。</p>
               </article>
             </div>
           </div>
@@ -304,10 +320,10 @@
 
         <section id="final-cta" class="final-cta content-section" aria-labelledby="final-title">
           <div class="final-panel reveal">
-            <p class="eyebrow">Begin</p>
-            <h2 id="final-title">Begin your color archive.</h2>
-            <a class="button button-primary" href="https://testflight.apple.com/join/rWr4e8p2" target="_blank" rel="noopener">
-              Join TestFlight
+            <p class="eyebrow" data-i18n="beginLabel">开始</p>
+            <h2 id="final-title" data-i18n="finalTitle">开始你的色彩档案。</h2>
+            <a class="button button-primary" href="mailto:hello@yellingbytes.com?subject=ColorPlate%20TestFlight" data-i18n="cta">
+              加入 TestFlight
             </a>
           </div>
         </section>
@@ -315,13 +331,13 @@
 
       <footer class="site-footer">
         <div>
-          <strong>ColorPlate</strong>
-          <span>Archive the colors you eat.</span>
+          <strong data-i18n="brand">食色录</strong>
+          <span data-i18n="footerLine">把餐食变成会生长的色彩档案。</span>
         </div>
-        <nav aria-label="Legal">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="support.html">Support</a>
+        <nav aria-label="Legal" data-i18n-attr="aria-label:legal">
+          <a href="privacy.html" data-i18n="privacyShort">隐私</a>
+          <a href="terms.html" data-i18n="termsShort">条款</a>
+          <a href="support.html" data-i18n="support">支持</a>
         </nav>
         <p>&copy; 2026 Yelling Bytes</p>
       </footer>
