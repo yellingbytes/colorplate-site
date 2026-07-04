@@ -1141,7 +1141,8 @@ html[lang="zh-Hans"] .final-panel p {
 }
 
 .feature-section {
-  padding: clamp(4.5rem, 10vw, 8rem) 0;
+  padding-top: clamp(4.5rem, 10vw, 8rem);
+  padding-bottom: clamp(4.5rem, 10vw, 8rem);
   align-items: center;
   border-top: 1px solid rgba(243, 234, 216, 0.08);
 }
@@ -1756,6 +1757,37 @@ html[lang="zh-Hans"] .legal-main h1 {
     min-height: 34rem;
   }
 
+  .eat-section {
+    gap: 1.35rem;
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+  }
+
+  .eat-section .feature-copy {
+    position: relative;
+    z-index: 2;
+  }
+
+  .eat-section .feature-copy p {
+    margin-bottom: 0;
+  }
+
+  .eat-section .ingredient-stack {
+    margin-top: 1.15rem;
+  }
+
+  .eat-visual {
+    z-index: 1;
+    min-height: 25rem;
+    margin-top: -2.35rem;
+    place-items: start end;
+    overflow: visible;
+  }
+
+  .eat-visual .phone-feature {
+    width: min(64vw, 15.75rem);
+  }
+
   .hero-story-ribbon {
     top: 8rem;
     width: 82vw;
@@ -1793,7 +1825,7 @@ html[lang="zh-Hans"] .legal-main h1 {
 
   .dish-card {
     left: 0;
-    bottom: 1rem;
+    bottom: 0.6rem;
   }
 
   .poster-card {
