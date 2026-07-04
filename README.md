@@ -23,7 +23,8 @@ Support is available at `support.html`.
 
 ## CTA links
 
-Update the `Join TestFlight` links in `index.html` once the TestFlight or App Store URL is available.
+The primary CTA points to the published App Store listing:
+https://apps.apple.com/us/app/colorplate/id6779374350
 
 ## App Store preparation
 
